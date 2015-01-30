@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		};
 		var n = document.location.href.indexOf('#');
 		if (n > 0)
-			i.value = document.location.href.substr(n + 1);
+			i.value = decodeURIComponent(document.location.href.substr(n + 1));
 		f.bind(i)();
 		i.addEventListener('type', f);
 		i.addEventListener('keypress', f);
