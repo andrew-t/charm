@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function(){
 				setResult(n, true);
 			}
 			if (new RegExp('^[\ud800-\udbff][\udc00-\udfff]$').test(this.value)) {
-				var n = ((this.value.charCodeAt(0) - 0xD800) << 10) + this.value.charCodeAt(1) - 0xDC00;
+				var n = ((this.value.charCodeAt(0) - 0xD800) << 10) + this.value.charCodeAt(1) - 0xDC00 + 0x010000;
 				skip.push(reverse[n]);
 				setResult(n, true);
 			}
