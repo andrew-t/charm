@@ -62,6 +62,11 @@ document.addEventListener('DOMContentLoaded', function(){
 			oldValue = this.value;
 			document.location.href = document.location.href.split('#')[0] + '#' + this.value;
 			var skip = [];
+			if (/^.$/.test(this.value)) {
+				var n = this.value.charCodeAt(0);
+				skip.push(reverse[n]);
+				setResult(n, true);
+			}
 			if (/^[0-9]+$/.test(this.value)) {
 				var n = parseInt(this.value, 10);
 				skip.push(reverse[n]);
