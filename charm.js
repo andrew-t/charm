@@ -67,6 +67,14 @@ document.addEventListener('DOMContentLoaded', function(){
 				skip.push(reverse[n]);
 				setResult(n, true);
 			}
+			if (new RegExp('^[\ud800-\udbff][\udc00-\dfff]$').test(this.value)) {
+				var n = this.value.charCodeAt(0) - 0xD800;
+				skip.push(reverse[n]);
+				setResult(n, true);
+				n = this.value.charCodeAt(1) - 0xDC00;
+				skip.push(reverse[n]);
+				setResult(n, true);
+			}
 			if (/^[0-9]+$/.test(this.value)) {
 				var n = parseInt(this.value, 10);
 				skip.push(reverse[n]);
