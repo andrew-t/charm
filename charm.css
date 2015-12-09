@@ -47,14 +47,13 @@ li {
 
 .app-ad {
 	position: absolute;
-	background: #33c;
-	color: #fff;
-	font-weight: bold;
 	text-align: center;
 	display: block;
-	border: 1px solid #000;
 	text-decoration: none;
 	z-index: 1;
+}
+.app-ad img {
+	width: 100%;
 }
 
 @media (min-width: 401px) and (min-height: 401px) {
@@ -82,18 +81,6 @@ li {
 		top: 30px;
 		right: 30px;
 		width: 190px;
-		font-size: 20px;
-		padding: 10px;
-		border-radius: 5px;
-		border: 1px solid #006;
-		border-bottom: 4px solid #006;
-	}
-	.app-ad:hover {
-		background: #55e;
-	}
-	.app-ad:active {
-		top: 33px;
-		border: 1px solid #006;
 	}
 	@media (max-width: 1000px) {
 		input {
@@ -124,9 +111,5 @@ li {
 		bottom: 30px;
 		right: 30px;
 		left: 30px;
-		font-size: 20px;
-		padding: 10px;
-		box-shadow: 0 2px 15px black;
-		border: 1px solid #fff;
 	}
 }
